@@ -1,19 +1,25 @@
-body{
+body {
     font-family: 'Roboto', sans-serif;
     background-color: #0b051d;
 }
-.hero{
-    background-image: url("../images/BG\ PC.png");
+
+.hero {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: #FFF;
 }
-#sticky-parallax-header{
+
+#sticky-parallax-header {
     font-size: 4rem;
+    background-image: url("../images/BG\ PC.png");
 }
-h1,h2,p,img{
+
+h1,
+h2,
+p,
+img {
     animation: .3s fade linear both;
     animation-timeline: view();
     animation-range: cover 15% cover 50%;
@@ -21,13 +27,15 @@ h1,h2,p,img{
 }
 
 @keyframes fade {
-    from{
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
+
 @supports(animation-range: 0vh 90vh) {
     @keyframes sticky-parallax-header-move-and-size {
         from {
@@ -41,6 +49,10 @@ h1,h2,p,img{
             height: 10vh;
             font-size: 1.25em;
             padding-top: 1rem;
+            background: #0b051d49;
+            /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
     }
 
